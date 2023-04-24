@@ -165,8 +165,11 @@ body {
 .imgBanner {
     position: absolute;
     bottom: 0;
-    left: 0;
     z-index: 1;
+}
+
+.small-banner {
+    display: none;
 }
 
 .imgBanner img {
@@ -512,9 +515,37 @@ body {
 
 
 @media (max-width: 786px) { 
-    .imgBanner {
+
+    .imgBanner .mobile-banner {
         display: none;
     }
+
+    .imgBanner {
+        width: 70%;
+        right: 0;
+    }
+
+    .header p {
+        display: none;
+    }
+
+    .header h5 {
+        font-size: 1.4rem;
+    }
+
+    .header .separate-line {
+        width: 30%;
+    }
+
+    .small-banner {
+        display: block;
+    }
+
+    .info-container {
+        padding: 1rem 0;
+        width: 100%;
+    }
+    
 
     .dashBtn {
         display: block
@@ -529,7 +560,7 @@ body {
 
     .nav-right {
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 9;
         top: 5.5rem;
         left: 0;
